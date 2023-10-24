@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@600&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-svg-orange: invert(73%) sepia(79%) saturate(2930%) hue-rotate(334deg) brightness(96%) contrast(100%);
+    --color-svg-blue-light: invert(55%) sepia(95%) saturate(1936%) hue-rotate(155deg) brightness(97%) contrast(101%);
+    --color-svg-blue-dark: invert(17%) sepia(35%) saturate(6082%) hue-rotate(214deg) brightness(87%) contrast(110%);
+    --color-svg-grey: invert(81%) sepia(6%) saturate(131%) hue-rotate(191deg) brightness(90%) contrast(90%);
+    --color-primary1: #00339B;
+    --color-primary2: #F58634;
+    --color-secondary: #F0F0F0;
+    --color-blue-light: #00B7EF;
+    --color-highlight: #E0A800;
+    --color-paragraph: #606C78;
+    --color-heading: #161616;
+    --color-linear-gradient: 0.25turn, #00339B, #00B7EF;
+
+    --color-grey-3: #606062;
+    --color-grey-1: #B6B7BB;
+    --color-grey-0: #F8F9FA;
+    --color-white: #FFFFFF;
+}
+
+.font-text {
+    font-family: "Rubik";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.font-display-text {
+    font-family: "Rubik";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.2%;
+    /* 79.92px */
+    text-transform: capitalize;
+}
+
+.font-heading-01 {
+    font-family: "Rubik";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.2%;
+    /* 66.6px */
+    text-transform: capitalize;
+}
+
+.font-heading-02 {
+    font-family: "Rubik";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.2%;
+    /* 53.28px */
+    text-transform: capitalize;
+}
+
+.font-heading-03 {
+    font-family: "Rubik";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.font-heading-04 {
+    font-family: "Rubik";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 129.7%;
+    /* 38.91px */
+    text-transform: capitalize;
+}
+
+.font-heading-05 {
+    font-family: "Rubik";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 129.7%;
+    /* 32.425px */
+    text-transform: capitalize;
+}
+
+.font-heading-06 {
+    font-family: "Rubik";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 129.7%;
+    /* 25.94px */
+    text-transform: capitalize;
+}
+
+.font-paragraph{
+    font-family: "Rubik";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.font-para{
+    font-family: "Rubik";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.font-inpara{
+    color: var(--color-grey-1);
+    font-family: "Krub";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px
+}
+.font-quote {
+    font-family: "Rubik";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.font-label {
+    font-family: "Rubik";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.font-button {
+    font-family: "Krub";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135.023%; /* 21.604px */
+}
+
+.button-orange,
+.button-blue {
+    width: 194px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Krub";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135.023%; /* 21.604px */
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-orange {
+    background-image: url(./img/button-orange.svg);
+    background-color: var(--color-highlight);
+    color: var(--color-heading);
+}
+
+.button-orange:hover {
+    background-image: url(./img/button-orange-hover.svg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.button-blue {
+    background-image: url(./img/button-blue.svg);
+    background-color: var(--color-primary1);
+    color: var(--color-white);
+}
+
+.button-blue:hover {
+    background-image: url(./img/button-blue-hover.svg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--color-grey-4);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ====================================== HEADER =============================================== */
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 80px;
+    background-color: var(--color-primary1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+header .container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+header img {
+    width: 190px;
+    object-fit: contain;
+    margin-right: 70px;
+}
+
+header .container div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+}
+
+header .container > .font-inpara{
+    height: 100%;
+    background-color: white;
+    padding: 0 50px;
+    color: var(--color-grey-3);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+header .container > .font-inpara:hover{
+    background-color: var(--color-primary2);
+    color: white;
+}
+
+header .container div > .font-inpara{
+    color: var(--color-white);
+}
+
+/* ====================================== HOME =============================================== */
+
+.home {
+    height: 90vh;
+    background-image: url(./img/close-up-person-doing-online-shopping.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #00339B90, #00339B00);
+    z-index: 1;
+}
+
+.home .container {
+    width: 100%;
+    z-index: 2;
+}
+
+.home .container > div{
+    display: flex;
+    width: 571px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.home h1 {
+    color: var(--color-secondary);
+    font-family: "Rubik";
+    font-size: 60px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 2.3);
+}
+
+.home span {
+    color: var(--color-secondary);
+    display: flex;
+    padding: 3px 9px;
+    align-items: center;
+    gap: 10px;
+    background: #00339B90;
+    border-left: solid 5px var(--color-highlight);
+    line-height: 19px;
+}
+
+.home .font-inpara {
+    color: var(--color-secondary);
+    line-height: 19px;
+}
+
+/* ====================================== ROLL BACKGROUND =============================================== */
+
+
+.roll-background-message{
+    height: 75vh;
+    background-image: url(./img/high-angle-shot-beautiful.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.roll-background-message .font-56px{
+    font-size: 56px;
+}
+
+.roll-background-message .font-20px {
+    font-size: 20px;
+}
+
+.roll-background-message .font-56px,
+.roll-background-message .font-20px {
+    color: var(--color-secondary);
+    font-family: "Rubik";
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 2.3);
+}
+
+/* ====================================== HOME EXTRA =============================================== */
+.home-extra {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10%;
+}
+
+.home-extra > .background {
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.home-extra > .background img {
+    object-fit: cover;
+    height: 40vh;
+    width: 100vw;
+}
+
+.home-extra .container {
+    height: 500px;
+    background-color: var(--color-white);
+    padding: 85px;
+    display: flex;
+}
+
+.home-extra .container .art-box{
+    background-image: url(./img/light-bulb-with-drawing-graph.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.home-extra .container .art-box > img {
+    width: 372px;
+    height: 248px;
+    padding: 25px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background-color: var(--color-white);
+    position: absolute;
+    bottom: -25%;
+    left: -25%;
+}
+
+.home-extra .container .text-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
+    padding-right: 10%;
+    gap: 40px;
+}
+
+.text-box > .font-label {
+    color: var(--color-primary1);
+    background: rgba(232, 232, 232, 0.50);
+    display: inline-flex;
+    width: fit-content;
+    padding: 3px 8px;
+    align-items: center;
+    border-left: solid 5px var(--color-highlight);
+    gap: 10px;
+}
+
+.text-box > .font-paragraph {
+    color:var(--color-heading);
+}
+
+.text-box > .font-inpara {
+    line-height: 21px;
+    color: var(--color-grey-1)
+}
+
+/* ====================================== PRODUCT SHOWCASE =============================================== */
+
+.product-showcase {
+    height: 450px;
+    margin-top: 25px;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-showcase .container {
+    display: flex;
+    width: 873px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.product-showcase ul {
+    display: flex;
+    width: 873px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.product-showcase li {
+    display: flex;
+    width: 40%;
+    height: 120px;
+    gap: 28px;
+    align-items: center;
+    border: solid var(--color-secondary) 2px;
+    cursor: default;
+}
+
+.product-showcase img {
+    height: 84px;
+    width: 84px;
+    filter: var(--color-svg-orange);
+}
+
+.product-showcase li:hover {
+    border: solid var(--color-primary2) 2px;
+}
+
+/* ====================================== PRODUCt LIST =============================================== */
+
+.product-list {
+    min-height: 80vh;
+}
+
+.product-list > .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-list > .container > .text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.product-list > .container > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 55px;
+    margin-bottom: 45px;
+}
+
+.product-list li {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.product-list li > img {
+    height: 54px;
+    width: 54px;
+}
+
+/* ====================================== UPCOMING PRODUCTS =============================================== */
+
+.upcoming-products-list {
+    min-height: 60vh;
+    margin: 60px 0;
+}
+.upcoming-products-list .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 64px;
+}
+
+.upcoming-products-list .text-box{
+    max-width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.upcoming-products-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 29px;
+}
+
+.upcoming-products-list li {
+    display: flex;
+    width: 380px;
+    height: 300px;
+    padding: 61px 50px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    transition: box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.upcoming-products-list li:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upcoming-products-list .soon {
+    background-color: var(--color-secondary);
+}
+
+.upcoming-products-list .soon .font-heading-04{
+    color: var(--color-primary1);
+}
+
+.upcoming-products-list .active {
+    background-color: var(--color-primary1);
+}
+
+.upcoming-products-list .active .font-heading-04 {
+    color: var(--color-secondary);
+}
+/* ====================================== LOCATION MAP =============================================== */
+
+.location-map {
+    min-height: 76vh;
+    position: relative;
+}
+
+.location-map .background {
+    position: absolute;
+    bottom: 0;
+    height: 400px;
+    width: 100vw;
+    background: linear-gradient(to bottom right, #F58634, #E0A800);
+    z-index: -1;
+}
+
+.location-map .text-box,
+.location-map .container {
+    width: 100%;
+    max-width: 1673px;
+    padding: 15px, 0, 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.location-map ul {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.location-map li {
+    width: 320px;
+    height: 407px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px 20px 0;
+    position: relative;
+}
+
+.location-map li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.location-map ul > :first-child {
+    background-image: url(./img/brasil/Amazon_Theatre.jpg);
+}
+
+.location-map ul > :nth-child(2) {
+    background-image: url(./img/brasil/nordeste.jpg);
+}
+
+.location-map ul > :nth-child(3) {
+    background-image: url(./img/brasil/sul.jpg);
+}
+
+.location-map ul > :nth-child(4) {
+    background-image: url(./img/brasil/sudeste.jpg);
+}
+
+.location-map ul > :nth-child(5) {
+    background-image: url(./img/brasil/centrooeste.jpg);
+}
+
+.location-map li > .font-heading-06 {
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.location-map li > .font-inpara {
+    color: var(--color-highlight);
+    z-index: 2;
+}
+
+/* ====================================== EXTRA LOGO =============================================== */
+
+.extra-section {
+    min-height: 100vh;
+    position: relative;
+}
+
+.square {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(14%, -50%);
+    width: 50%;
+    max-width: 50vw;
+    height: 50vw;
+    max-height: 75vh;
+    background-color: var(--color-primary1);
+}  
+
+.extra-section img {
+    height: 610px;
+    width: 930px;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-10%, -50%);
+}
+
+.extra-section .button-orange {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+/* ====================================== CONTACT =============================================== */
+
+.contact {
+    min-height: 30vh;
+    position: relative;
+    background-color: var(--color-secondary);
+}
+
+.contact > .background {
+    margin-bottom: -4px;
+}
+
+.contact > .background img {
+    object-fit: cover;
+    height: 40vh;
+    width: 100vw;
+}
+
+.navigation {
+    background-color: var(--color-blue-light);
+    height: 120px;
+}
+
+.navigation .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.navigation .container * {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 45px;
+    position: relative;
+}
+
+.navigation .container img {
+    background-color: var(--color-primary1);
+    object-fit: contain;
+}
+
+.navigation .font-heading-05 {
+    color: var(--color-white);
+    transition: 1s ease;
+}
+
+.navigation .font-heading-05:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 1s ease;
+}
+
+.contact > .container .social {
+    border-bottom: solid 2px var(--color-grey-3);
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+    gap: 8rem;
+    margin-bottom: 50px;
+}
+
+.contact > .container .social img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.contact > .container .social img:hover{
+    filter: var(--color-svg-orange)
+}
+
+.contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* padding-bottom: 50px; */
+}
+
+.contact li {
+    height: 130px;
+    width: 350px;
+    padding: 0 4rem;
+    border: solid 0.1rem var(--color-grey-3);
+    transition: 0.4s ease-in-out;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.contact li:hover {
+    border-color: var(--color-primary2);
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact li > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact li img{
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
+.contact li .font-inpara {
+    color: var(--color-grey-3);
+}
+
+
+/* ====================================== FOOTER =============================================== */
+
+footer {
+    background-color: var(--color-primary1);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+footer img {
+    height: 3.5rem;
+    width: 13.5rem;
+}
+
+footer .font-inpara{
+    color: var(--color-white);
+}
+
+footer .font-button {
+    font-weight: 700;
+    color: var(--color-white);
+}
