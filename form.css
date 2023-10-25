@@ -423,6 +423,7 @@ main .container .font-quote,
 main .container .font-para,
 main .container > .font-label,
 main .container > .font-button,
+main .container .font-label,
 main .container .font-label::placeholder {
     color: var(--color-white);
 }
