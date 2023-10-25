@@ -22,7 +22,7 @@
 
 .font-text {
     font-family: "Rubik";
-    font-size: 35px;
+    font-size: clamp(17.5px, 6vw, 35px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -30,37 +30,34 @@
 
 .font-display-text {
     font-family: "Rubik";
-    font-size: 60px;
+    font-size: clamp(30px, 8vw, 60px);
     font-style: normal;
     font-weight: 700;
     line-height: 133.2%;
-    /* 79.92px */
     text-transform: capitalize;
 }
 
 .font-heading-01 {
     font-family: "Rubik";
-    font-size: 50px;
+    font-size: clamp(25px, 6.67vw, 50px);
     font-style: normal;
     font-weight: 600;
     line-height: 133.2%;
-    /* 66.6px */
     text-transform: capitalize;
 }
 
 .font-heading-02 {
     font-family: "Rubik";
-    font-size: 40px;
+    font-size: clamp(20px, 5.33vw, 40px);
     font-style: normal;
     font-weight: 600;
     line-height: 133.2%;
-    /* 53.28px */
     text-transform: capitalize;
 }
 
 .font-heading-03 {
     font-family: "Rubik";
-    font-size: 35px;
+    font-size: clamp(17.5px, 4.67vw, 35px);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -69,59 +66,59 @@
 
 .font-heading-04 {
     font-family: "Rubik";
-    font-size: 30px;
+    font-size: clamp(15px, 4vw, 30px);
     font-style: normal;
     font-weight: 500;
     line-height: 129.7%;
-    /* 38.91px */
     text-transform: capitalize;
 }
 
 .font-heading-05 {
     font-family: "Rubik";
-    font-size: 25px;
+    font-size: clamp(12.5px, 3.33vw, 25px);
     font-style: normal;
     font-weight: 500;
     line-height: 129.7%;
-    /* 32.425px */
     text-transform: capitalize;
 }
 
 .font-heading-06 {
     font-family: "Rubik";
-    font-size: 20px;
+    font-size: clamp(10px, 2.67vw, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: 129.7%;
-    /* 25.94px */
     text-transform: capitalize;
 }
 
-.font-paragraph{
+.font-paragraph {
     font-family: "Rubik";
-    font-size: 35px;
+    font-size: clamp(17.5px, 6vw, 35px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
-.font-para{
+
+.font-para {
     font-family: "Rubik";
-    font-size: 25px;
+    font-size: clamp(12.5px, 4.17vw, 25px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
-.font-inpara{
+
+.font-inpara {
     color: var(--color-grey-1);
     font-family: "Krub";
-    font-size: 16px;
+    font-size: clamp(14px, 2.67vw, 16px);
     font-style: normal;
     font-weight: 500;
-    line-height: 21px
+    line-height: 21px;
 }
+
 .font-quote {
     font-family: "Rubik";
-    font-size: 20px;
+    font-size: clamp(10px, 2.67vw, 20px);
     font-style: italic;
     font-weight: 500;
     line-height: normal;
@@ -129,7 +126,7 @@
 
 .font-label {
     font-family: "Rubik";
-    font-size: 18px;
+    font-size: clamp(9px, 2.4vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -137,7 +134,7 @@
 
 .font-button {
     font-family: "Krub";
-    font-size: 16px;
+    font-size: clamp(10px, 2.67vw, 16px);
     font-style: normal;
     font-weight: 600;
     line-height: 135.023%; /* 21.604px */
@@ -225,7 +222,7 @@ header {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    height: 80px;
+    min-height: 80px;
     background-color: var(--color-primary1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 3;
@@ -240,7 +237,11 @@ header .container{
     align-content: center;
 }
 
-header img {
+header menu img {
+    display: none;
+}
+
+header .container > img {
     width: 190px;
     object-fit: contain;
     margin-right: 70px;
@@ -254,8 +255,8 @@ header .container div {
 }
 
 header .container > .font-inpara{
-    height: 100%;
     background-color: white;
+    height: 80px;
     padding: 0 50px;
     color: var(--color-grey-3);
     display: flex;
@@ -268,16 +269,14 @@ header .container > .font-inpara:hover{
     color: white;
 }
 
-header .container div > .font-inpara{
+header menu .font-inpara{
     color: var(--color-white);
     position: relative;
     height: 100%;
-    display: flex;
-    align-items: center;
     padding: 20px;
 }
 
-header .container div > .font-inpara:hover::before {
+header menu .font-inpara:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -319,7 +318,7 @@ header .container div > .font-inpara:hover::before {
 
 .home .container > div{
     display: flex;
-    width: 571px;
+    width: clamp(300px, 50%, 571px);
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
@@ -328,7 +327,7 @@ header .container div > .font-inpara:hover::before {
 .home h1 {
     color: var(--color-secondary);
     font-family: "Rubik";
-    font-size: 60px;
+    font-size: clamp(30px, 5vw, 60px);
     font-weight: 700;
     font-style: normal;
     line-height: normal;
@@ -366,10 +365,11 @@ header .container div > .font-inpara:hover::before {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 0 30px
 }
 
 .roll-background-message .font-56px{
-    font-size: 56px;
+    font-size: clamp(45px, 5vw, 56px);
 }
 
 .roll-background-message .font-20px {
@@ -384,6 +384,7 @@ header .container div > .font-inpara:hover::before {
     font-style: normal;
     line-height: normal;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 2.3);
+    text-align: center;
 }
 
 /* ====================================== HOME EXTRA =============================================== */
@@ -406,7 +407,7 @@ header .container div > .font-inpara:hover::before {
 .home-extra > .background img {
     object-fit: cover;
     height: 40vh;
-    width: 100vw;
+    width: 95vw;
 }
 
 .home-extra .container {
@@ -467,7 +468,7 @@ header .container div > .font-inpara:hover::before {
 /* ====================================== PRODUCT SHOWCASE =============================================== */
 
 .product-showcase {
-    height: 450px;
+    min-height: 450px;
     background-color: var(--color-secondary);
     display: flex;
     align-items: center;
@@ -589,12 +590,13 @@ header .container div > .font-inpara:hover::before {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 29px;
 }
 
 .upcoming-products-list li {
     display: flex;
-    width: 380px;
+    width: clamp(250px, 100%, 380px);
     height: 300px;
     padding: 61px 50px;
     justify-content: space-between;
@@ -673,6 +675,7 @@ header .container div > .font-inpara:hover::before {
     justify-content: flex-end;
     padding: 0 20px 20px 0;
     position: relative;
+    flex-grow: 1;
 }
 
 .location-map li::before {
@@ -753,7 +756,6 @@ header .container div > .font-inpara:hover::before {
 /* ====================================== CONTACT =============================================== */
 
 .contact {
-    min-height: 30vh;
     position: relative;
     background-color: var(--color-secondary);
 }
@@ -793,7 +795,7 @@ header .container div > .font-inpara:hover::before {
     color: var(--color-secondary);
     font-family: "Rubik";
     font-weight: 700;
-    font-size: 40px;
+    font-size: clamp(25px, 4.67vw, 40px);
     font-style: normal;
     line-height: normal;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 2.3);
@@ -815,6 +817,7 @@ header .container div > .font-inpara:hover::before {
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
     height: 100%;
 }
 
@@ -825,6 +828,7 @@ header .container div > .font-inpara:hover::before {
     justify-content: center;
     text-align: center;
     height: 100%;
+    min-height: 80px;
     padding: 0 45px;
     position: relative;
 }
@@ -855,9 +859,8 @@ header .container div > .font-inpara:hover::before {
     padding-top: 70px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-bottom: 6rem;
-    gap: 8rem;
     margin-bottom: 50px;
 }
 
@@ -875,12 +878,13 @@ header .container div > .font-inpara:hover::before {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    /* padding-bottom: 50px; */
+    flex-wrap: wrap;
+    padding-bottom: 100px;
 }
 
 .contact li {
     height: 130px;
-    width: 350px;
+    width: clamp(250px, 100%, 350px);
     padding: 0 4rem;
     border: solid 0.1rem var(--color-grey-3);
     transition: 0.4s ease-in-out;
@@ -942,4 +946,222 @@ footer .font-inpara{
 footer .font-button {
     font-weight: 700;
     color: var(--color-white);
+}
+
+
+
+/* ============================ MEDIA QUERIES ============================ */
+
+@media screen and (max-width: 1230px){
+    
+    header > .container .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    
+    .dropdown img {
+        height: 65px;
+        width: 65px;
+        display: block;
+        position: absolute;
+        left: 35px;
+        top: 9px;
+        cursor: pointer;
+    }
+    
+    menu .font-inpara {
+        top: -100%;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        background-color: #00339B99;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    header .container > img {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .dropdown-content > div {
+        position: relative;
+        top: -100%;
+        left: 27px;
+        height: 70px;
+        width: 80px;
+        background-color: #ffffff20;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    header .container {
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 80px;
+        gap: 10px
+    }
+
+    header .container > .font-inpara{
+        padding: 0 25px;
+    }
+
+    .container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .home-extra {
+        align-items: flex-start;
+        height: 60vh;
+    }
+
+    .home-extra > .background {
+        top: 50%;
+    }
+
+    .home-extra .container .art-box{
+        background-image: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .home-extra .container .art-box img{
+        position: static;
+        width: clamp(250px, 50%, 375px);
+        object-fit: cover;
+    }
+
+    .home-extra .container {
+        background-color: rgba(255, 255, 255, 0);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    .home-extra .container .text-box {
+        max-width: none;
+        gap: 20px;
+        padding-right: 0;
+    }
+
+    .location-map ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .location-map .background {
+        position: absolute;
+        bottom: 25%;
+        
+    }
+}
+
+@media screen and (max-width: 1230px){
+    .location-map ul {
+        margin-bottom: 20px;
+    }
+
+    .navigation {
+        height: auto;
+        background-color: #00339B99;
+    }
+
+    .navigation .container {
+        flex-direction: column-reverse;
+    }
+
+    .navigation .font-heading-05 {
+        border-bottom: 2px solid var(--color-primary1);
+        background-color: #FFFFFF15;
+    }
+
+    .navigation .container * {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1041px){
+    .location-map .background {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .product-showcase .text-box {
+        align-self: center;
+        position: static;
+    }
+
+    .product-showcase ul {
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
+    
+    .product-showcase li {
+        width: clamp(220px, 80%, 330px);
+    }
+
+    .product-showcase .container {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .product-list > .container > ul {
+        justify-content: center;
+    }
+
+    .product-list li {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .home {
+        background-position: right 35% bottom 45%;
+        height: 60vh;
+    }
+
+    .navigation .container * {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 619px){
+    .product-list li {
+        align-items: center;
+        flex-grow: unset;
+    }
+}
+
+@media screen and (max-width: 575px){
+    header .container > .font-inpara{
+        height: 30px;
+        position: absolute;
+        bottom: -40%;
+        transform: translateX(-3%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    }
+
+    header .container > img {
+        left: auto;
+        transform: none;
+        width: 160px;
+    }
+
+    .navigation .container img {
+        padding: 0 20px;
+    }
+
+    .contact li {
+        padding: 0 15px;
+    }
 }
