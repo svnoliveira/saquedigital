@@ -10,35 +10,39 @@
     <header>
         <div class="container">
             <img src="./img/logo-creditocolor-branco.png" alt="logo saque digital">
-            <div>
-                <a href="#top" class="font-inpara">Home</a>
-                <a href="" class="font-inpara">Solicite um Empréstimo</a>
-            </div>
-            <a href="./index.html" class="font-inpara">Voltar à página inicial</a>
+            <menu class="dropdown">
+                <img src="./img/bars.svg" alt="bars menu icon">
+                <div class="dropdown-content">
+                    <div></div>
+                    <a href="#top" class="font-inpara">Home</a>
+                    <a href="" class="font-inpara">Solicite um Empréstimo</a>
+                    <a href="./index.html" class="font-inpara">Voltar à página inicial</a>
+                </div>
+            </menu>
+            <a href="./form.html" class="font-inpara">Portal do Parceiro</a>
         </div>
     </header>
     <main>
-        <form class="container">
+        <div class="container">
+            <div class="text-box">
+                <span class="font-label">Cadastro</span>
+            </div>
             <h1 class="font-para">Faça o seu pré-cadastro e venha ser nosso parceiro?</h1>
             <p class="font-button">Ao preencher o formulário um de nossos atendentes entrara em contato para finalizar o seu cadastro.</p>
-            <div>
-                <label for="name" class="font-quote">Nome:</label>
+            <form>
                 <input size="80%" id="name" type="text" placeholder="Digite o seu nome" class="font-label">
-            </div>
-            <div>
-                <label for="email" class="font-quote">Email:</label>
                 <input size="80%" id="email" type="text" placeholder="Digite o seu email" class="font-label">
-            </div>
-            <div>
-                <label for="whatsapp" class="font-quote">Whatsapp com DDD:</label>
                 <input size="80%" id="whatsapp" type="text" placeholder="(00) 9 0000-0000" class="font-label">
-            </div>
-            <div>
-                <label for="city" class="font-quote">Cidade/UF:</label>
                 <input size="80%" id="city" type="text" placeholder="Digite o nome da sua Cidade / UF" class="font-label">
-            </div>
-            <button type="submit" class="button-blue">Clique aqui para enviar</button>
-        </form>
+            </form>
+            <button type="submit" class="button-orange">Clique aqui para enviar</button>
+        </div>
     </main>
+    <footer>
+        <div class="container">
+            <p class="font-inpara"><b class="font-inpara">Saque Digital</b> é uma empresa da S C Carmo Empresa Simples
+                de Crédito <b class="font-inpara">CNPJ: 30.643.802/0001-80</b> Franca/SP</p>
+        </div>
+    </footer>
 </body>
 </html>
